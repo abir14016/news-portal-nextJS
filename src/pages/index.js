@@ -2,7 +2,7 @@ import Head from "next/head";
 import RootLayout from "@/components/Layouts/RootLayout";
 import Banner from "@/components/UI/Banner";
 
-
+//cloned starter pack
 const HomePage = () => {
   return (
     <>
