@@ -1,7 +1,7 @@
 import Head from "next/head";
 import RootLayout from "@/components/Layouts/RootLayout";
 import Banner from "@/components/UI/Banner";
-import AllNews from "@/components/UI/allNews";
+import AllNews from "../components/UI/AllNews";
 
 //cloned starter pack
 const HomePage = ({ allNews }) => {
@@ -21,6 +21,8 @@ const HomePage = ({ allNews }) => {
     </>
   );
 };
+
+
 export default HomePage;
 
 HomePage.getLayout = function getLayout(page) {
