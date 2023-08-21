@@ -1,10 +1,10 @@
 import Head from "next/head";
 import RootLayout from "@/components/Layouts/RootLayout";
 import Banner from "@/components/UI/Banner";
+import AllNews from "@/components/UI/allNews";
 
 //cloned starter pack
 const HomePage = ({ allNews }) => {
-  console.log(allNews)
   return (
     <>
       <Head>
@@ -17,6 +17,7 @@ const HomePage = ({ allNews }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Banner />
+      <AllNews allNews={allNews}></AllNews>
     </>
   );
 };
