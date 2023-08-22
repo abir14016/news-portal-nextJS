@@ -30,7 +30,7 @@ HomePage.getLayout = function getLayout(page) {
 };
 
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const res = await fetch("http://localhost:5000/news")
   const data = await res.json();
   // console.log(data)
@@ -38,6 +38,6 @@ export const getStaticProps = async () => {
     props: {
       allNews: data
     },
-    revalidate: 10
+    // revalidate: 10
   }
 }
