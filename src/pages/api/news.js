@@ -24,6 +24,16 @@ async function run(req, res) {
             const news = await newsCollection.find({}).toArray();
             res.send({ message: "success", statusCode: 200, data: news })
         }
+
+
+
+        if (req.method === "POST") {
+            const news = req.body;
+            const result = await newsCollection.insertOne(news);
+            res.json(result)
+        }
+
+
     } finally {
         // Ensures that the client will close when you finish/error
         // await client.close();
